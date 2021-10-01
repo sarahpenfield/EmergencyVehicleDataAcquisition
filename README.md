@@ -1,4 +1,4 @@
-# Emergency Vehicle Data Acquisition
+# Automated Response to Emergency Vehicles
 
 ![image](https://user-images.githubusercontent.com/78807472/135682706-1d6bb726-967b-4284-af72-caa876460891.png)
 
