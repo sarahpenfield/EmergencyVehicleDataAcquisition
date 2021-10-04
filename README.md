@@ -34,6 +34,8 @@ October 3, 2021
 
 The team completed hardware setup of all of the sensors and the LED light. *insert photo*
 
+![Oct3Circuit](https://user-images.githubusercontent.com/49326756/135781930-90edce73-935a-4fdd-8178-136b9c7e5d76.JPG)
+
 Together, we edited code for the following test cases that will be combined to determine if an emergency vehicle is approaching.
 1. Sound Detection only
 2. Light Detection only
