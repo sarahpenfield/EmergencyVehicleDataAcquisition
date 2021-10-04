@@ -23,49 +23,44 @@ For the to scale model, print statements will be used to show the volume reducti
 
 
 ## Progress Report
+Below are the progress reports for each meeting the team had, broken down by date to include the progress of the day, the issues, and the next steps.
 
 ### Current Progress
 October 1, 2021
-- created plan/schedule
-- acquired additional sensors
-- most of the hardware setup
-- found code sources for light, distance, and sound sensors
-- completed LED tutorial for use as the dashboard
+A plan and scheudle was created for the next two weeks until the project is due. The additional sensors were acquired from Amazon and most of the hardware was set up and ready to use. As a team, starter code for the light, sound, and distance sensors was added to the shared Google Drive for use in the next meeting. Finally, the team walked through the LED Tutorial on the course website for use as our dashboard display in the scaled model.
 
 October 3, 2021
-- edited code for:
-1. sound
-2. light
-3. distance
-4. sound&light
-5. distance&light
+The team completed hardware setup of all of the sensors and the LED light. *insert photo*
 
-- hardware assembly of entire setup
+Together, we edited code for the following test cases that will be combined to determine if an emergency vehicle is approaching.
+1. Sound Detection only
+2. Light Detection only
+3. Distance Detection only
+4. Distance and Light Detection
+5. Sound and Light Detection
+
+The first four test cases are fully working, yet the last is still a work in progress.
 
 ### Problems Encountered
 October 1, 2021
-- forgot to plug in the board
-- where should we start
+The group had to talk for a bit about where to start with the project as there were a lot of tasks to work through. Also, the group forgot to plug in the Raspberry Pi, which caused some obvious issues when trying to make the LED flash.
 
 October 3, 2021
-- had to rewrite SD card
-- we dont' understand bouncetime for the sound sensor / it is not consistent
-- decide how big the difference in light intensity should be (will be part of experiments section)
-- decide sampling frequency
+At the beginning of Sunday's meeting, the group had to rewrite SD card. The monitors were displaying the message that no HDMI input was detected, but once it was rewritten there were no additional problems.
+When editing all of the source code, we had to determine what sampling frequency we should be using. This was estimated based on the source code, but will be played with during the experimental phase of the project. Similarly, when writing the light intensity codes, we had to determine what difference in light intensity would be considered flashing. Using the source code, we ran a short experiment using the flashing light on an Apple Watch and went with 15% difference. However, this will continue to be edited during the full experiment phase. 
+Finally, the code for the sound and light detection is still a work in progress because our group is trying to understand how the sound sensor works with 'bouncetime' as found in the source code and whether a return of True/1 or False/0 means sound was detected. 
 
 ### Future Plan
 October 1, 2021
-- edit code for 7 cases
-- create personal vehicle scaled model
-- assemble remaining hardware
+At the next meeting, we would like to edit the source code to make as we need for the 7 cases we will be testing. Additionally, we'd like to finish assembling the hardware and create a scaled personal vehicle model.
 
 October 3, 2021
-- create personal vehicle scaled model
-- edit code for 3 cases (completed 4; one in progress, need 2 more)
-1. distance&sound
-2. distance&light&sound
-- include radio reduction print statemnts
-- filter out false positives with an overarching if all TRUE code
+At the next meeting, we will finish creating the  personal vehicle scaled model and continue editing the code. For the code, our specific tasks are to include:
+1. Complete Sound and Light detection code
+2. Create Distance and Sound detection code
+3. Create Distance, Light, and Sound detection code
+4. Create a master code that uses the return from 7 cases to determine if an emergency vehicle is actually approaching
+5. Include radio reduction print statements
 
 ## Methodology
 
