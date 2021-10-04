@@ -32,9 +32,9 @@ A plan and schedule was created for the next two weeks until the project is due.
 
 October 3, 2021
 
-The team completed hardware setup of all of the sensors and the LED light. *insert photo*
+The team completed hardware setup of all of the sensors and the LED light.
 
-![Oct3Circuit](https://user-images.githubusercontent.com/49326756/135781930-90edce73-935a-4fdd-8178-136b9c7e5d76.JPG)
+![Oct3Circuit](https://user-images.githubusercontent.com/49326756/135782207-aafcd84f-e19b-41ab-9677-c0523eb0ba7f.JPG)
 
 Together, we edited code for the following test cases that will be combined to determine if an emergency vehicle is approaching.
 1. Sound Detection only
