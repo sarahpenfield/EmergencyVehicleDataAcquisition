@@ -27,9 +27,11 @@ Below are the progress reports for each meeting the team had, broken down by dat
 
 ### Current Progress
 October 1, 2021
+
 A plan and schedule was created for the next two weeks until the project is due. The additional sensors were acquired from Amazon and most of the hardware was set up and ready to use. As a team, starter code for the light, sound, and distance sensors was added to the shared Google Drive for use in the next meeting. Finally, the team walked through the LED Tutorial on the course website for use as our dashboard display in the scaled model.
 
 October 3, 2021
+
 The team completed hardware setup of all of the sensors and the LED light. *insert photo*
 
 Together, we edited code for the following test cases that will be combined to determine if an emergency vehicle is approaching.
@@ -43,9 +45,11 @@ The first four test cases are fully working, yet the last is still a work in pro
 
 ### Problems Encountered
 October 1, 2021
+
 The group had to talk for a bit about where to start with the project as there were a lot of tasks to work through. Also, the group forgot to plug in the Raspberry Pi, which caused some obvious issues when trying to make the LED flash.
 
 October 3, 2021
+
 At the beginning of Sunday's meeting, the group had to rewrite SD card. The monitors were displaying the message that no HDMI input was detected, but once it was rewritten there were no additional problems.
 When editing all of the source code, we had to determine what sampling frequency we should be using. This was estimated based on the source code, but will be played with during the experimental phase of the project. Similarly, when writing the light intensity codes, we had to determine what difference in light intensity would be considered flashing. Using the source code, we ran a short experiment using the flashing light on an Apple Watch and went with 15% difference. However, this will continue to be edited during the full experiment phase. 
 Finally, the code for the sound and light detection is still a work in progress because our group is trying to understand how the sound sensor works with 'bouncetime' as found in the source code and whether a return of True/1 or False/0 means sound was detected. 
