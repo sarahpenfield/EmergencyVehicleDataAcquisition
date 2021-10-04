@@ -27,7 +27,7 @@ Below are the progress reports for each meeting the team had, broken down by dat
 
 ### Current Progress
 October 1, 2021
-A plan and scheudle was created for the next two weeks until the project is due. The additional sensors were acquired from Amazon and most of the hardware was set up and ready to use. As a team, starter code for the light, sound, and distance sensors was added to the shared Google Drive for use in the next meeting. Finally, the team walked through the LED Tutorial on the course website for use as our dashboard display in the scaled model.
+A plan and schedule was created for the next two weeks until the project is due. The additional sensors were acquired from Amazon and most of the hardware was set up and ready to use. As a team, starter code for the light, sound, and distance sensors was added to the shared Google Drive for use in the next meeting. Finally, the team walked through the LED Tutorial on the course website for use as our dashboard display in the scaled model.
 
 October 3, 2021
 The team completed hardware setup of all of the sensors and the LED light. *insert photo*
