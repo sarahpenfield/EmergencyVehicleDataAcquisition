@@ -56,9 +56,11 @@ Finally, the code for the sound and light detection is still a work in progress 
 
 ### Future Plan
 October 1, 2021
+
 At the next meeting, we would like to edit the source code to make as we need for the 7 cases we will be testing. Additionally, we'd like to finish assembling the hardware and create a scaled personal vehicle model.
 
 October 3, 2021
+
 At the next meeting, we will finish creating the  personal vehicle scaled model and continue editing the code. For the code, our specific tasks are to include:
 1. Complete Sound and Light detection code
 2. Create Distance and Sound detection code
