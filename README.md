@@ -26,18 +26,46 @@ For the to scale model, print statements will be used to show the volume reducti
 
 ### Current Progress
 October 1, 2021
+- created plan/schedule
+- acquired additional sensors
+- most of the hardware setup
+- found code sources for light, distance, and sound sensors
+- completed LED tutorial for use as the dashboard
 
 October 3, 2021
+- edited code for:
+1. sound
+2. light
+3. distance
+4. sound&light
+5. distance&light
+
+- hardware assembly of entire setup
 
 ### Problems Encountered
 October 1, 2021
+- forgot to plug in the board
+- where should we start
 
 October 3, 2021
+- had to rewrite SD card
+- we dont' understand bouncetime for the sound sensor / it is not consistent
+- decide how big the difference in light intensity should be (will be part of experiments section)
+- decide sampling frequency
 
 ### Future Plan
 October 1, 2021
+- edit code for 7 cases
+- create personal vehicle scaled model
+- assemble remaining hardware
 
 October 3, 2021
+- create personal vehicle scaled model
+- edit code for 3 cases (completed 4; one in progress, need 2 more)
+1. distance&sound
+2. distance&light&sound
+- include radio reduction print statemnts
+- filter out false positives with an overarching if all TRUE code
 
 ## Methodology
 
