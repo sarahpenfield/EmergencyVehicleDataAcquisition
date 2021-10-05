@@ -47,7 +47,7 @@ The first four test cases are fully working, yet the last is still a work in pro
 
 October 5, 2021
 
-Our team added the LED and volume reduction to the code. We learned to publish the github rather than just send the edit link. We also created the prototypes out of old tissue boxes for the perosnal vehicle and the emergency vehicle. Finally, we worked more on integrating the sound sensor to our code. We made some progress in understanding what the source code is doing, but need to continue working. 
+Our team added the LED and volume reduction to the code. We learned to publish the github rather than just send the edit link. We also created the prototypes out of old tissue boxes for the perosnal vehicle and the emergency vehicle. Finally, we worked more on integrating the sound sensor to our code. We made some progress in understanding what the source code is doing (low output = high sound intensity), but need to continue working. 
 
 ### Problems Encountered
 October 1, 2021
@@ -62,7 +62,7 @@ Finally, the code for the sound and light detection is still a work in progress 
 
 October 5, 2021
 
-We struggled to...
+We struggled to determine the sampling frequency we should be using for the sound sensor. By running experiments using a music notes app, we determined that the sensor could only occasionally detect 440 Hz. This means that our sampling rate will need to be at least 880 Hz, or one sample every 0.0011 seconds. 
 
 ### Future Plan
 October 1, 2021
@@ -85,9 +85,17 @@ In our next meeting we will finish the sound code, likely with the help of the i
 ## Methodology
 
 ### Phenomena of Interest
-- light intensity
-- sound intensity 
-- distance to nearest object behind
+1. Light
+We are interested in knowing the intensity of the light in the surrounding environment as there will almost always be ambient light. When intensity is significantly higher than the surrounding light (15% greater) for multiple sensed periods of time, this is an indicator that an emergency vehicle could be approaching.
+Similarly, the filter created to only allow red light through indicates that there is both a color red and a high intensity light, sensed multiple times in a row.  
+
+2. Sound  
+We are interested in knowing the intensity of the sound in the surrounding envrionment as again there will almost always be background noise around the vehicle. However, our sensor cannot determine the intensity of sound and rather can only sense whether a sound above the threshold is present. We set the sampling frequency to 880 Hz and the threshold to 130 decibels to represent the typical decibel level of an emergency vehicle. When sound above the threshold is sesnsed multiple times in a row, it indicates that an emergency vehicle could be approaching.
+
+3. Distance
+We are interested in knowing the distance to the nearest object behind the personal vehicle. When this distance is less than XXX meters, we know that something is behind the car. This is an indicator than an emergency vehicle could be approaching.
+
+Overall, each of these phenomena individually will pick up on many stimuli that are not actually emergency vehicles. However, combnining all three and using repeated sampling helps to decrease the number of false positives of approaching emergency vehicles. While annoying and incorrect from our project's standpoint, it is important to note that false positives will not be harmful to anyone.
 
 ### Sensor(s) Used
 - sound
