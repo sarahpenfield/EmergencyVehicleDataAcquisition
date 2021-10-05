@@ -36,7 +36,7 @@ The team completed hardware setup of all of the sensors and the LED light.
 
 ![Oct3Circuit](https://user-images.githubusercontent.com/49326756/135782207-aafcd84f-e19b-41ab-9677-c0523eb0ba7f.JPG)
 
-Together, we edited code for the following test cases that will be combined to determine if an emergency vehicle is approaching.
+Together, we edited code for the following test cases that will be combined to determine if an emergency vehicle is approaching. We incorporated the ADC into the light sensor to show intensity rather than only light/no light.
 1. Sound Detection only
 2. Light Detection only
 3. Distance Detection only
