@@ -1,0 +1,34 @@
+Photosensitive light sensor
+  VCC ---> +3.3V
+  GND ---> GND 6
+  AO ---> ADC 0
+
+Ultrasonic Distance Sensor
+  VCC ---> +3.3V
+  Trig ---> GPIO 23
+  Echo ---> GPIO 24
+  GND ---> GND 30
+
+Sound Sensor
+  VCC ---> +3.3V
+  GND ---> GND 20
+  OUT ---> GPIO 17
+
+  OUT ---> ADC 1
+
+ADC MCP3008
+  VDD ---> +3.3V
+  VREF ---> +3.3V
+  AGND ---> GND (-3.3V)
+  CLK ---> SCLK
+  DOUT ---> MISO
+  DIN ---> MOSI
+  CS/SHDN ---> CEO
+  DGND ---> GND (-3.3V)
+
+LED
+  Anode ---> 18
+  Cathode ---> Resistor
+  Resistor ---> GND
+
+
