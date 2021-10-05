@@ -47,7 +47,7 @@ The first four test cases are fully working, yet the last is still a work in pro
 
 October 5, 2021
 
-Our team added the LED and volume reduction to the code. We learned to publish the github rather than just send the edit link. We also created the prototypes out of old tissue boxes for the perosnal vehicle and the emergency vehicle. Finally, we worked more on integrating the sound sensor to our code. We made some progress in understanding what the source code is doing (low output = high sound intensity), but need to continue working. 
+Our team added the LED and volume reduction to the code. We learned to publish the github rather than just send the edit link. We also created the prototypes out of old tissue boxes for the perosnal vehicle and the emergency vehicle. Finally, we worked more on integrating the sound sensor to our code. We made some progress in understanding what the source code is doing (low output = high sound intensity), but need to continue working. We determined the correct sampling frequency to use based on light and sound then assuming 2*the larger.
 
 ### Problems Encountered
 October 1, 2021
@@ -62,7 +62,7 @@ Finally, the code for the sound and light detection is still a work in progress 
 
 October 5, 2021
 
-We struggled to determine the sampling frequency we should be using for the sound sensor. By running experiments using a music notes app, we determined that the sensor could only occasionally detect 440 Hz. This means that our sampling rate will need to be at least 880 Hz, or one sample every 0.0011 seconds. 
+We struggled to determine the sampling frequency we should be using for the sound sensor. By running experiments using a music notes app, we determined that the sensor could only occasionally detect 440 Hz. This means that our sampling rate will need to be at least 880 Hz, or one sample every 0.0011 seconds.
 
 ### Future Plan
 October 1, 2021
