@@ -37,11 +37,11 @@ The team completed hardware setup of all of the sensors and the LED light.
 ![Oct3Circuit](https://user-images.githubusercontent.com/49326756/135782207-aafcd84f-e19b-41ab-9677-c0523eb0ba7f.JPG)
 
 Together, we edited code for the following test cases that will be combined to determine if an emergency vehicle is approaching. We incorporated the ADC into the light sensor to show intensity rather than only light/no light.
-1. Sound Detection only
-2. Light Detection only
-3. Distance Detection only
-4. Distance and Light Detection
-5. Sound and Light Detection
+1. Sound Detection only (SoundTest.py)
+2. Light Detection only (LightandLED.py)
+3. Distance Detection only (Distance.py)
+4. Distance and Light Detection (LightDistanceTest103.py)
+5. Sound and Light Detection (SoundLightTest103.py)
 
 The first four test cases are fully working, yet the last is still a work in progress.
 
