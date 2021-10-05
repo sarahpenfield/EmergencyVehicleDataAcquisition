@@ -15,6 +15,8 @@ Distance Sensor:
 Light Sensor:
   CODE: https://kookye.com/2017/06/01/design-sound-light-switch-throught-raspberry-pi-and-sound-light-sensor/
   General Info: https://eepower.com/resistor-guide/resistor-types/photo-resistor/#
+  
+  Flashing of emergency vehicles recommended 2.2 Hz - 8 Hz (https://www.ojp.gov/pdffiles1/nij/nlectc/253106.pdf)
 
 
 
