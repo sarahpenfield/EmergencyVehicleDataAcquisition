@@ -90,7 +90,7 @@ We are interested in knowing the intensity of the light in the surrounding envir
 Similarly, the filter created to only allow red light through indicates that there is both a color red and a high intensity light, sensed multiple times in a row.  
 
 2. Sound  
-We are interested in knowing the intensity of the sound in the surrounding envrionment as again there will almost always be background noise around the vehicle. However, our sensor cannot determine the intensity of sound and rather can only sense whether a sound above the threshold is present. We set the sampling frequency to 880 Hz and the threshold to 130 decibels to represent the typical decibel level of an emergency vehicle. When sound above the threshold is sesnsed multiple times in a row, it indicates that an emergency vehicle could be approaching.
+We are interested in knowing the intensity of the sound in the surrounding envrionment as again there will almost always be background noise around the vehicle. However, our sensor cannot determine the intensity of sound and rather can only sense whether a sound above the threshold is present. We set the sampling frequency to 880 Hz and the threshold to XXX decibels to represent the typical decibel level of an emergency vehicle (in reality this level is 130 decibels). When sound above the threshold is sesnsed multiple times in a row, it indicates that an emergency vehicle could be approaching.
 
 3. Distance
 We are interested in knowing the distance to the nearest object behind the personal vehicle. When this distance is less than XXX meters, we know that something is behind the car. This is an indicator than an emergency vehicle could be approaching.
