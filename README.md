@@ -48,6 +48,9 @@ October 5, 2021
 
 Our team added the LED and volume reduction to the code. We learned to publish the github rather than just send the edit link. We also created the prototypes out of old tissue boxes for the perosnal vehicle and the emergency vehicle. Finally, we worked more on integrating the sound sensor to our code. We made some progress in understanding what the source code is doing (low output = high sound intensity), but need to continue working. We determined the correct sampling frequency to use based on light and sound then assuming 2*the larger.
 
+October 7, 2021
+
+Currently working on obtaining the spec sheets for all of our sensors used.
 ### Problems Encountered
 October 1, 2021
 
