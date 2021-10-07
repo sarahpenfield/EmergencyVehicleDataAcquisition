@@ -63,6 +63,9 @@ October 5, 2021
 
 We struggled to determine the sampling frequency we should be using for the sound sensor. By running experiments using a music notes app, we determined that the sensor could only occasionally detect 440 Hz. This means that our sampling rate will need to be at least 880 Hz, or one sample every 0.0011 seconds.
 
+Questions: How to get sound sensor to work, do we need bouncetime; how to use two different sampling frequencies to measure sound and light at same time (orders of magnitude difference between sound and light frequencies); how to justify sampling frequency of light
+  - Current sampling frequency: time.sleep(0.75) which is about 1.3 samples per second, using 200 bpm flashes (about 3.3 flashes per second), but we are comparing the differences between three different measurements (i1, i2, i3, and del1, del2) where if the difference between the measurements is greater than some predetermined value, then there is an emergency vehicle (see LightDistanceLED105.py)
+
 ### Future Plan
 October 1, 2021
 
