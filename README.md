@@ -23,7 +23,6 @@ For the to scale model, print statements will be used to show the volume reducti
 
 
 ## Progress Report
-Below are the progress reports for each meeting the team had, broken down by date to include the progress of the day, the issues, and the next steps.
 
 ### Current Progress
 October 1, 2021
