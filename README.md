@@ -103,31 +103,39 @@ At the next meeting, we will finish creating the  personal vehicle scaled model 
 
 October 5, 2021
 
-In our next meeting we will finish the sound code, likely with the help of the instructor, and incorporate the light filter on to the sensor. This will allow us to begin running the experiments. 
+In our next meeting we will finish the sound code, likely with the help of the instructor, and incorporate it to the light and distance code. This will allow us to begin running the experiments. 
 
 October 7, 2021
 
+In our next meeting we plan to run the actual experiments with recording data and video.
+
 October 8, 2021
+
+In our next meeting we plan to edit and voiceover the videos from the meeting today and incorporate additional video / instructional and presentation information.
 
 ## Methodology
 
 ### Phenomena of Interest
 1. Light
-We are interested in knowing the intensity of the light in the surrounding environment as there will almost always be ambient light. When intensity is significantly higher than the surrounding light (15% greater) for multiple sensed periods of time, this is an indicator that an emergency vehicle could be approaching.
-Similarly, the filter created to only allow red light through indicates that there is both a color red and a high intensity light, sensed multiple times in a row.  
+We are interested in knowing the intensity of the light in the surrounding environment as there will almost always be ambient light. When intensity is significantly higher than the surrounding light (5% greater) for multiple sensed periods of time, this is an indicator that an emergency vehicle could be approaching.
 
 2. Sound  
-We are interested in knowing the intensity of the sound in the surrounding envrionment as again there will almost always be background noise around the vehicle. However, our sensor cannot determine the intensity of sound and rather can only sense whether a sound above the threshold is present. We set the sampling frequency to 880 Hz and the threshold to XXX decibels to represent the typical decibel level of an emergency vehicle (in reality this level is 130 decibels). When sound above the threshold is sesnsed multiple times in a row, it indicates that an emergency vehicle could be approaching.
+We are interested in knowing the intensity of the sound in the surrounding envrionment as again there will almost always be background noise around the vehicle. However, our sensor cannot determine the intensity of sound and rather can only sense whether a sound above the threshold is present. When sound above the threshold is sesnsed multiple times in a row, it indicates that an emergency vehicle could be approaching.
 
 3. Distance
-We are interested in knowing the distance to the nearest object behind the personal vehicle. When this distance is less than XXX meters, we know that something is behind the car. This is an indicator than an emergency vehicle could be approaching.
+We are interested in knowing the distance to the nearest object behind the personal vehicle. When this distance is less than a certain number of meters, we know that something is behind the car. This is an indicator than an emergency vehicle could be approaching. Note that on a smaller scale, our distance was only set at 50 cm.
 
-Overall, each of these phenomena individually will pick up on many stimuli that are not actually emergency vehicles. However, combnining all three and using repeated sampling helps to decrease the number of false positives of approaching emergency vehicles. While annoying and incorrect from our project's standpoint, it is important to note that false positives will not be harmful to anyone.
+Overall, each of these phenomena individually will pick up on many stimuli that are not actually emergency vehicles. However, combnining all three and using repeated sampling helps to decrease the number of false positives of approaching emergency vehicles. While annoying, it is important to note that false positives will not be harmful to anyone.
 
 ### Sensor(s) Used
-- sound
-- ultrasonic
-- light intensity
+1. Light (Photosensitive LM 393)
+This sensor has both analog and digital outputs, depending on which way the switch is turned. Our group used the analog output and then utilized and ADC to convert to the digital information needed in the code. It also includes an onboard potentiometer for sensitivity adjustment, which we used depending on how bright the room was. Finally, its input voltage range is 3.3 - 5.0 V.
+
+2. Sound (1PCS 3 Pin)
+This sensor has an analog output in which a LOW value indicates a sound higher than the threshold and a HIGH value indicates that a louder sound has not been detected. Similar to the light sensor, it includes an adjustable potentiometer for sensitivity which we used a lot in trial and error. Again, its input voltage is 3.3 - 5.0 V.
+
+3. Distance (Ultrasonic HC-SR04)
+This sensor has a digital output and displays the distance to the nearest object within a 2 - 400 cm range. The accuracy of this measurement is up to 3 mm. On board, there is a transmitter, receiver, and a control circuit and the voltage range is 3.0 - 5.0 V
 
 ### Signal Conditioning and Processing
 - use of difference of intensity for light
@@ -137,7 +145,9 @@ Overall, each of these phenomena individually will pick up on many stimuli that 
   - We are only looking for EV that are behind the car, so the distane sensor must detect an approaching or close object in addition to the sensed flashing lights      and high sound 
 
 ## Experiments and Results
-Testing to see if this can be edited at the same time as someone else.  Let's see if it works.
+Did the following trial types:
+
+Statistical Analysis:
 
 ## Discussion
 
