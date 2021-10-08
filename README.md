@@ -46,11 +46,17 @@ The first four test cases are fully working, yet the last is still a work in pro
 
 October 5, 2021
 
-Our team added the LED and volume reduction to the code. We learned to publish the github rather than just send the edit link. We also created the prototypes out of old tissue boxes for the perosnal vehicle and the emergency vehicle. Finally, we worked more on integrating the sound sensor to our code. We made some progress in understanding what the source code is doing (low output = high sound intensity), but need to continue working. We determined the correct sampling frequency to use based on light and sound then assuming 2*the larger.
+Our team added the LED and volume reduction to the code. We learned to publish the github rather than just send the edit link. We also created the prototypes out of boxes for the perosnal vehicle. Finally, we worked more on integrating the sound sensor to our code. We made some progress in understanding what the source code is doing (low output = high sound intensity), but need to continue working. We determined the correct sampling frequency to use based on light and sound.
 
 October 7, 2021
 
-Currently working on obtaining the spec sheets for all of our sensors used.
+Currently working on obtaining the spec sheets for all of our sensors used. Our team also met with Professor Berges to disccuss our code and found that putting the while loop inside the callback function rather than the other way around solves our problem. Additionally, the professor explained to us how the aliasing is occuring in the light frequency; discussed below.
+
+Octboer 8, 2021
+
+We ran all of our experiments and videod some of the trials. In our code, we added a write to text file section so that we would be able to do statistical analysis on the outputs to determine the number of false positives and false negatives we encountered in each trial. 
+
+
 ### Problems Encountered
 October 1, 2021
 
@@ -66,8 +72,20 @@ October 5, 2021
 
 We struggled to determine the sampling frequency we should be using for the sound sensor. By running experiments using a music notes app, we determined that the sensor could only occasionally detect 440 Hz. This means that our sampling rate will need to be at least 880 Hz, or one sample every 0.0011 seconds.
 
-Questions: How to get sound sensor to work, do we need bouncetime; how to use two different sampling frequencies to measure sound and light at same time (orders of magnitude difference between sound and light frequencies); how to justify sampling frequency of light
-  - Current sampling frequency: time.sleep(0.75) which is about 1.3 samples per second, using 200 bpm flashes (about 3.3 flashes per second), but we are comparing the differences between three different measurements (i1, i2, i3, and del1, del2) where if the difference between the measurements is greater than some predetermined value, then there is an emergency vehicle (see LightDistanceLED105.py)
+Below are a list of questions to ask at our meeting with the professor: 
+1. How to get sound sensor to work, do we need bouncetime
+2. How to use two different sampling frequencies to measure sound and light at same time (orders of magnitude difference between sound and light frequencies
+3. How to justify sampling frequency of light (see LightDistanceLED105.py)
+
+October 7, 2021
+LED light was turning off at the beginning of each sample test
+where should we place the initializing in the code with callback and while loop
+
+October 8, 2021
+light intensity difference = umbrella
+recieving a none for every time the first sample was run
+had to ask Brian for scissors
+error in how to create text file
 
 ### Future Plan
 October 1, 2021
@@ -86,6 +104,10 @@ At the next meeting, we will finish creating the  personal vehicle scaled model 
 October 5, 2021
 
 In our next meeting we will finish the sound code, likely with the help of the instructor, and incorporate the light filter on to the sensor. This will allow us to begin running the experiments. 
+
+October 7, 2021
+
+October 8, 2021
 
 ## Methodology
 
