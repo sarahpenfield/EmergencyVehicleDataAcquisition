@@ -137,6 +137,11 @@ This sensor has an analog output in which a LOW value indicates a sound higher t
 3. Distance (Ultrasonic HC-SR04)
 This sensor has a digital output and displays the distance to the nearest object within a 2 - 400 cm range. The accuracy of this measurement is up to 3 mm. On board, there is a transmitter, receiver, and a control circuit and the voltage range is 3.0 - 5.0 V
 
+The sensor and Raspberry Pi configuration can be found in Figure XX
+
+![PinDiagram](https://user-images.githubusercontent.com/49326756/136623919-8b73a6c2-4dd8-4ff6-b9f3-76a94cdeb79b.jpg)
+
+
 ### Signal Conditioning and Processing
 - use of difference of intensity for light
   - Establish an ambient setting for light, test approximately how much intensity reading will change when flashing light is added, use that change as a baseline       for expected difference in light intensity for a flashing light
