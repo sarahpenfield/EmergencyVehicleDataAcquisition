@@ -54,7 +54,7 @@ Currently working on obtaining the spec sheets for all of our sensors used. Our 
 
 Octboer 8, 2021
 
-We ran all of our experiments and videod some of the trials. In our code, we added a write to text file section so that we would be able to do statistical analysis on the outputs to determine the number of false positives and false negatives we encountered in each trial. 
+We ran all of our experiments and videod some of the trials. In our code (FinalCodeWithPrintOuts.py), we added a write to text file section so that we would be able to do statistical analysis on the outputs to determine the number of false positives and false negatives we encountered in each trial. 
 
 
 ### Problems Encountered
