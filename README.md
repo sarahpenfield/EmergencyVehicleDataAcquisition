@@ -123,7 +123,7 @@ We are interested in knowing the intensity of the light in the surrounding envir
 We are interested in knowing the intensity of the sound in the surrounding envrionment as again there will almost always be background noise around the vehicle. However, our sensor cannot determine the intensity of sound and rather can only sense whether a sound above the threshold is present. When sound above the threshold is sesnsed multiple times in a row, it indicates that an emergency vehicle could be approaching.
 
 3. Distance
-We are interested in knowing the distance to the nearest object behind the personal vehicle. When this distance is less than a certain number of meters, we know that something is behind the car. This is an indicator than an emergency vehicle could be approaching. Note that on a smaller scale, our distance was only set at 50 cm.
+We are interested in knowing the distance to the nearest object behind the personal vehicle. When this distance is less than a certain number of meters, we know that something is behind the car. This is an indicator than an emergency vehicle could be approaching. Note that on a smaller scale, our distance was only set at 25 cm.
 
 Overall, each of these phenomena individually will pick up on many stimuli that are not actually emergency vehicles. However, combnining all three and using repeated sampling helps to decrease the number of false positives of approaching emergency vehicles. While annoying, it is important to note that false positives will not be harmful to anyone.
 
