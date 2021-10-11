@@ -150,10 +150,18 @@ The sensor and Raspberry Pi configuration can be found in Figure XX
   - We are only looking for EV that are behind the car, so the distane sensor must detect an approaching or close object in addition to the sensed flashing lights      and high sound 
 
 ## Experiments and Results
-Did the following trial types:
+To test the effectiveness of our emergency vehicle detection system, we completed the seven test trials.  Each trial represents a potential real life scenario that could either mean an emergency vehicle or trigger a false negative.
+- Scenario 1: There is a regular vehicle approaching from behind with normal traffic sounds.  This is expected to trigger the distance sensor.
+- Scenario 2:  There is a construction/oversized vehicle approaching with a flashing light, and regular traffic sounds.  This is expected to trigger the distance and light sensors.
+- Scenario 3: There is an emergency vehicle in the area that you can hear and see, and there are no cars approaching from behind.  This is expected to trigger the sound and light sensors.
+- Scenario 4: There is an emergency vehicle in the area that you can hear but cannot see, and there are cars approaching from behind.  This is expected to trigger the distance and light sensors.
+- Scenario 5: There is a source of flashing lights such as a malfunctioning street lamp or storefront, no cars approaching from behind, and regular traffic sounds.  This is expected to trigger the light sensor.
+- Scenario 6: There is a siren or loud source of sound in the general vicinity that you cannot see, and there are no cars approaching from behind.  This is expected to trigger the sound sensor.
+- Scenario 7: There is an emergency vehicel approaching from behind.  This should trigger all three sensors and turn on the LED and reduce the music volume.
 
 Statistical Analysis:
 
 ## Discussion
+Future work would include adding the color filter that we were unable to get to due to resources and time constraints.  This would help reduce false positives due to construction/oversized vehicles approaching, which have flashing lights and loud noises.  The flashing lights on these vehicle types are orange, so filtering for only red and blue would reduce false positives.  Also include sampling for more light flashing frequencies due to emergency vehicles having more than one flashing light at different frequencies and colors.
 
 
