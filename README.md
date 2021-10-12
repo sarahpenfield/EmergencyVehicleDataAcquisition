@@ -128,14 +128,7 @@ We are interested in knowing the distance to the nearest object behind the perso
 Overall, each of these phenomena individually will pick up on many stimuli that are not actually emergency vehicles. However, combnining all three and using repeated sampling helps to decrease the number of false positives of approaching emergency vehicles. While annoying, it is important to note that false positives will not be harmful to anyone.
 
 ### Sensor(s) Used
-1. Light (Photosensitive LM 393)
-This sensor has both analog and digital outputs, depending on which way the switch is turned. Our group used the analog output and then utilized and ADC to convert to the digital information needed in the code. It also includes an onboard potentiometer for sensitivity adjustment, which we used depending on how bright the room was. Finally, its input voltage range is 3.3 - 5.0 V.
-
-2. Sound (1PCS 3 Pin)
-This sensor has an analog output in which a LOW value indicates a sound higher than the threshold and a HIGH value indicates that a louder sound has not been detected. Similar to the light sensor, it includes an adjustable potentiometer for sensitivity which we used a lot in trial and error. Again, its input voltage is 3.3 - 5.0 V.
-
-3. Distance (Ultrasonic HC-SR04)
-This sensor has a digital output and displays the distance to the nearest object within a 2 - 400 cm range. The accuracy of this measurement is up to 3 mm. On board, there is a transmitter, receiver, and a control circuit and the voltage range is 3.0 - 5.0 V
+<img width="565" alt="Screen Shot 2021-10-12 at 11 54 43 AM" src="https://user-images.githubusercontent.com/91758370/136989464-ca08c1a8-442a-4949-be41-8d27258d1b39.png">
 
 The sensor and Raspberry Pi configuration can be found in Figure XX
 
