@@ -149,13 +149,12 @@ The sensor and Raspberry Pi configuration can be found in Figure XX
 
 <img src = "https://user-images.githubusercontent.com/49326756/136623919-8b73a6c2-4dd8-4ff6-b9f3-76a94cdeb79b.jpg" height = "500">
 
-
 ### Signal Conditioning and Processing
 - use of difference of intensity for light
   - Establish an ambient setting for light, test approximately how much intensity reading will change when flashing light is added, use that change as a baseline       for expected difference in light intensity for a flashing light
-  - Also connected to ADC to read intensity value rather than just low or high
+  - The output of the light sensor is analog, which cannot be read by the Raspberry Pi.  To fix this, we used an ADC so that the actual intensity of light can be determined from the output rather than just high or low.  (Shweta, can you add what we talked about earlier here?)
 - use of multiple EV sense conditions
-- use of multiple TRUE of EV sensed to decrease the rate of false positives
+- use of multiple TRUE conditions of EV sensed to decrease the rate of false positives
   - We are only looking for EV that are behind the car, so the distane sensor must detect an approaching or close object in addition to the sensed flashing lights      and high sound 
 
 Our group experienced aliasing in the light sensing we completed. Our tests were completed at either (1) a flashing frequency of 150 bpm (2.5 Hz) and a sleep time of 1 second or (2) a flashing frequency of 200 bpm (3.33 Hz) and a sleep time of 0.75 seconds. For this explanation, we will use the second frequency (3.33 Hz) as an example.
@@ -166,6 +165,9 @@ Using the folding diagram shown below from Class Reference 15, we know that the 
 
 <img width="401" alt="Screen Shot 2021-10-12 at 12 32 48 PM" src="https://user-images.githubusercontent.com/91758370/136995267-a63c93dd-a388-4715-bf0e-7105fa54f34f.png">
 
+#### Code
+(Anamika, can you add something about your commented code here? Like the most important aspects or where to find the complete commented code)
+
 ## Experiments and Results
 To test the effectiveness of our emergency vehicle detection system, we completed the seven test trials.  Each trial represents a potential real life scenario that could either mean an emergency vehicle or trigger a false negative.
 - Scenario 1: There is a regular vehicle approaching from behind with normal traffic sounds.  This is expected to trigger the distance sensor.
@@ -175,6 +177,8 @@ To test the effectiveness of our emergency vehicle detection system, we complete
 - Scenario 5: There is a source of flashing lights such as a malfunctioning street lamp or storefront, no cars approaching from behind, and regular traffic sounds.  This is expected to trigger the light sensor.
 - Scenario 6: There is a siren or loud source of sound in the general vicinity that you cannot see, and there are no cars approaching from behind.  This is expected to trigger the sound sensor.
 - Scenario 7: There is an emergency vehicel approaching from behind.  This should trigger all three sensors and turn on the LED and reduce the music volume.
+
+The video linked at the top of this page shows how the system responds appropriately to each scenario, with the detection of an approaching emergency vehicle and the LED turning on only for Scenario 7.
 
 Statistical Analysis:
 To determine how accurate our system is at detecting emergency vehicles, we performed a series tests to determine how often there is a false positive or negative.  A false positive is defined as the system outputting an emergency vehicle (LED on and music volume reduced) when there is no emergency vehicle.  A false negative is the system not detecting an emergency vehicle even when there is one.  We tested the system by playing a siren and having a vehicle within the trigger distance, but turning the flashing light on and off.  The experimental results can be found in Table XX.  The false negatives are difficult to verify as real false negatives because it could have resulted in a miscommunication between the recorder and the person controlling the flashing lights.
