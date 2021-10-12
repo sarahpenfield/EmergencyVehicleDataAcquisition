@@ -156,6 +156,14 @@ The sensor and Raspberry Pi configuration can be found in Figure XX
 - use of multiple TRUE of EV sensed to decrease the rate of false positives
   - We are only looking for EV that are behind the car, so the distane sensor must detect an approaching or close object in addition to the sensed flashing lights      and high sound 
 
+Our group experienced aliasing in the light sensing we completed. Our tests were completed at either (1) a flashing frequency of 150 bpm (2.5 Hz) and a sleep time of 1 second or (2) a flashing frequency of 200 bpm (3.33 Hz) and a sleep time of 0.75 seconds. For this explanation, we will use the second frequency (3.33 Hz) as an example.
+
+The sampling frequency for the flashing of 3.33 Hz is based on the sleep time of 0.75 seconds and equals 1.33 Hz. Given the Nyquist theorem, the maximum frequency we should be able to sample is 0.665 Hz (fn). From here, we know that k = fs / fn = 3.33 Hz / 0.665 Hz = 5.0  
+
+Using the folding diagram shown below from Class Reference 15, we know that the aliased k = 1 and the aliased frequency = ka * fn = 0.665 Hz; which happens to be equal to the Nyquist frequency.
+
+<img width="401" alt="Screen Shot 2021-10-12 at 12 32 48 PM" src="https://user-images.githubusercontent.com/91758370/136995267-a63c93dd-a388-4715-bf0e-7105fa54f34f.png">
+
 ## Experiments and Results
 To test the effectiveness of our emergency vehicle detection system, we completed the seven test trials.  Each trial represents a potential real life scenario that could either mean an emergency vehicle or trigger a false negative.
 - Scenario 1: There is a regular vehicle approaching from behind with normal traffic sounds.  This is expected to trigger the distance sensor.
