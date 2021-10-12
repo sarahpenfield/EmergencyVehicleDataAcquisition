@@ -25,7 +25,7 @@ For the to scale model, print statements will be used to show the volume reducti
 ## Progress Report
 
 ### Current Progress
-October 1, 2021
+#### October 1, 2021
 
 A plan and schedule was created for the next two weeks until the project is due. The additional sensors were acquired from Amazon and most of the hardware was set up and ready to use. As a team, starter code for the light, sound, and distance sensors was added to the shared Google Drive for use in the next meeting. Finally, the team walked through the LED Tutorial on the course website for use as our dashboard display in the scaled model.
 
