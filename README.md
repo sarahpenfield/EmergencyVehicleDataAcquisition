@@ -158,7 +158,7 @@ The sensor and Raspberry Pi configuration can be found in Figure XX
 
 Our group experienced aliasing in the light sensing we completed. Our tests were completed at either (1) a flashing frequency of 150 bpm (2.5 Hz) and a sleep time of 1 second or (2) a flashing frequency of 200 bpm (3.33 Hz) and a sleep time of 0.75 seconds. For this explanation, we will use the second frequency (3.33 Hz) as an example.
 
-The sampling frequency for the flashing of 3.33 Hz is based on the sleep time of 0.75 seconds and equals 1.33 Hz. Given the Nyquist theorem, the maximum frequency we should be able to sample is 0.665 Hz (fn). From here, we know that k = fs / fn = 3.33 Hz / 0.665 Hz = 5.0  
+The sampling frequency for the flashing of 3.33 Hz is based on the sleep time of 0.75 seconds which equals a sampling frequency of 1.33 Hz. Given the Nyquist theorem, the maximum frequency we should be able to read is 0.665 Hz (fn). From here, we know that k = fs / fn = 3.33 Hz / 0.665 Hz = 5.0  
 
 Using the folding diagram shown below from Class Reference 15, we know that the aliased k = 1 and the aliased frequency = ka * fn = 0.665 Hz; which happens to be equal to the Nyquist frequency.
 
