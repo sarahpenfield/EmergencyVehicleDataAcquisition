@@ -1,6 +1,6 @@
 # Automated Response to Emergency Vehicles
 
-![image](https://user-images.githubusercontent.com/78807472/135682706-1d6bb726-967b-4284-af72-caa876460891.png)
+<img src="https://user-images.githubusercontent.com/78807472/135682706-1d6bb726-967b-4284-af72-caa876460891.png" height = "300">
 
 
 ### Introduction
@@ -33,7 +33,7 @@ October 3, 2021
 
 The team completed hardware setup of all of the sensors and the LED light.
 
-![Oct3Circuit](https://user-images.githubusercontent.com/49326756/135782207-aafcd84f-e19b-41ab-9677-c0523eb0ba7f.JPG)
+<img src="https://user-images.githubusercontent.com/49326756/135782207-aafcd84f-e19b-41ab-9677-c0523eb0ba7f.JPG" height = "250">
 
 Together, we edited code for the following test cases that will be combined to determine if an emergency vehicle is approaching. We incorporated the ADC into the light sensor to show intensity rather than only light/no light.
 1. Sound Detection only (SoundTest.py)
@@ -55,6 +55,10 @@ Currently working on obtaining the spec sheets for all of our sensors used. Our 
 Octboer 8, 2021
 
 We ran all of our experiments and videod some of the trials. In our code (FinalCodeWithPrintOuts.py), we added a write to text file section so that we would be able to do statistical analysis on the outputs to determine the number of false positives and false negatives we encountered in each trial. 
+
+October 12, 2021
+
+We finished assigning tasks for the Github report writing and created the voiceovers for our video.
 
 
 ### Problems Encountered
@@ -82,10 +86,15 @@ LED light was turning off at the beginning of each sample test
 where should we place the initializing in the code with callback and while loop
 
 October 8, 2021
-light intensity difference = umbrella
-recieving a none for every time the first sample was run
-had to ask Brian for scissors
-error in how to create text file
+During our experiments, we struggled to have the light intensity difference be strong enough while there were other people in the room. We decided to add an umbrella on top of the sensor to increase the difference in intensity before we were able to turn off the lights when other groups left. 
+
+<img src="https://user-images.githubusercontent.com/91758370/136990524-3fe045f4-857f-4764-847d-5ae601a304cd.jpeg" height = "350">
+
+We also ran into a problem of recieving a 'none' value for every time the first sample was run. To fix this, we coded out our first sample as we knew it was always going to be wrong. Finally, it took us a bit to debug our code in writing the text files for the statistical analysis we would create.
+
+Octboer 12, 2021
+
+Over the weekend, one of our wires got chewed by a group member's cat. Since we had already filmed our experiments, we didn't have a huge problem but we did replace the wire. 
 
 ### Future Plan
 October 1, 2021
@@ -113,6 +122,10 @@ October 8, 2021
 
 In our next meeting we plan to edit and voiceover the videos from the meeting today and incorporate additional video / instructional and presentation information.
 
+Octboer 12, 2021
+
+This was our final meeting and all other small details for the class will be communicated over our Whatsapp group chat!
+
 ## Methodology
 
 ### Phenomena of Interest
@@ -128,23 +141,17 @@ We are interested in knowing the distance to the nearest object behind the perso
 Overall, each of these phenomena individually will pick up on many stimuli that are not actually emergency vehicles. However, combnining all three and using repeated sampling helps to decrease the number of false positives of approaching emergency vehicles. While annoying, it is important to note that false positives will not be harmful to anyone.
 
 ### Sensor(s) Used
-1. Light (Photosensitive LM 393)
-This sensor has both analog and digital outputs, depending on which way the switch is turned. Our group used the analog output and then utilized and ADC to convert to the digital information needed in the code. It also includes an onboard potentiometer for sensitivity adjustment, which we used depending on how bright the room was. Finally, its input voltage range is 3.3 - 5.0 V.
-
-2. Sound (1PCS 3 Pin)
-This sensor has an analog output in which a LOW value indicates a sound higher than the threshold and a HIGH value indicates that a louder sound has not been detected. Similar to the light sensor, it includes an adjustable potentiometer for sensitivity which we used a lot in trial and error. Again, its input voltage is 3.3 - 5.0 V.
-
-3. Distance (Ultrasonic HC-SR04)
-This sensor has a digital output and displays the distance to the nearest object within a 2 - 400 cm range. The accuracy of this measurement is up to 3 mm. On board, there is a transmitter, receiver, and a control circuit and the voltage range is 3.0 - 5.0 V
+<img width="565" alt="Screen Shot 2021-10-12 at 11 54 43 AM" src="https://user-images.githubusercontent.com/91758370/136989464-ca08c1a8-442a-4949-be41-8d27258d1b39.png">
 
 The sensor and Raspberry Pi configuration can be found in Figure XX
 
-![PinDiagram](https://user-images.githubusercontent.com/49326756/136623919-8b73a6c2-4dd8-4ff6-b9f3-76a94cdeb79b.jpg)
+<img src = "https://user-images.githubusercontent.com/49326756/136623919-8b73a6c2-4dd8-4ff6-b9f3-76a94cdeb79b.jpg" height = "500">
 
 
 ### Signal Conditioning and Processing
 - use of difference of intensity for light
   - Establish an ambient setting for light, test approximately how much intensity reading will change when flashing light is added, use that change as a baseline       for expected difference in light intensity for a flashing light
+  - Also connected to ADC to read intensity value rather than just low or high
 - use of multiple EV sense conditions
 - use of multiple TRUE of EV sensed to decrease the rate of false positives
   - We are only looking for EV that are behind the car, so the distane sensor must detect an approaching or close object in addition to the sensed flashing lights      and high sound 
@@ -164,5 +171,4 @@ To determine how accurate our system is at detecting emergency vehicles, we perf
 
 ## Discussion
 Future work would include adding the color filter that we were unable to get to due to resources and time constraints.  This would help reduce false positives due to construction/oversized vehicles approaching, which have flashing lights and loud noises.  The flashing lights on these vehicle types are orange, so filtering for only red and blue would reduce false positives.  Also include sampling for more light flashing frequencies due to emergency vehicles having more than one flashing light at different frequencies and colors.
-
 
