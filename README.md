@@ -48,6 +48,8 @@ The first four test cases are fully working, yet the last is still a work in pro
 
 Our team added the LED and volume reduction to the code. We learned to publish the github rather than just send the edit link. We also created the prototypes out of boxes for the perosnal vehicle. Finally, we worked more on integrating the sound sensor to our code. We made some progress in understanding what the source code is doing (low output = high sound intensity), but need to continue working. We determined the correct sampling frequency to use based on light and sound.
 
+<img src="https://user-images.githubusercontent.com/49326756/137036053-c6ed93a6-5ddb-4330-b168-b440a6c83b83.JPG" height = "350">
+
 #### October 7, 2021
 
 Currently working on obtaining the spec sheets for all of our sensors used. Our team also met with Professor Berges to disccuss our code and found that putting the while loop inside the callback function rather than the other way around solves our problem. Additionally, the professor explained to us how the aliasing is occuring in the light frequency; discussed below.
@@ -158,9 +160,9 @@ The sensor and Raspberry Pi configuration can be found in Figure XX
 
 Our group experienced aliasing in the light sensing we completed. Our tests were completed at either (1) a flashing frequency of 150 bpm (2.5 Hz) and a sleep time of 1 second or (2) a flashing frequency of 200 bpm (3.33 Hz) and a sleep time of 0.75 seconds. For this explanation, we will use the second frequency (3.33 Hz) as an example.
 
-The sampling frequency for the flashing of 3.33 Hz is based on the sleep time of 0.75 seconds which equals a sampling frequency of 1.33 Hz. Given the Nyquist theorem, the maximum frequency we should be able to read is 0.665 Hz (fn). From here, we know that k = fs / fn = 3.33 Hz / 0.665 Hz = 5.0  
+The sampling frequency for the flashing of 3.33 Hz is based on the sleep time of 0.75 seconds which equals a sampling frequency of 1.33 Hz. Given the Nyquist theorem, the maximum frequency we should be able to read is 0.67 Hz (f<sub>n</sub>). From here, we know that k = fs / f<sub>n</sub> = 3.33 Hz / 0.67 Hz = 5.0  
 
-Using the folding diagram shown below from Class Reference 15, we know that the aliased k = 1 and the aliased frequency = ka * fn = 0.665 Hz; which happens to be equal to the Nyquist frequency.
+Using the folding diagram shown below from Class Reference 15, we know that the aliased k<sub>a</sub> = 1 and the aliased frequency = k<sub>a</sub> * f<sub>n</sub> = 0.67 Hz; which happens to be equal to the Nyquist frequency.
 
 <img width="401" alt="Screen Shot 2021-10-12 at 12 32 48 PM" src="https://user-images.githubusercontent.com/91758370/136995267-a63c93dd-a388-4715-bf0e-7105fa54f34f.png">
 
@@ -181,4 +183,7 @@ To determine how accurate our system is at detecting emergency vehicles, we perf
 
 ## Discussion
 Future work would include adding the color filter that we were unable to get to due to resources and time constraints.  This would help reduce false positives due to construction/oversized vehicles approaching, which have flashing lights and loud noises.  The flashing lights on these vehicle types are orange, so filtering for only red and blue would reduce false positives.  Also include sampling for more light flashing frequencies due to emergency vehicles having more than one flashing light at different frequencies and colors.
+
+## Sources
+
 
