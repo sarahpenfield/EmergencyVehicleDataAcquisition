@@ -1,6 +1,6 @@
 # Automated Response to Emergency Vehicles
 
-![image](https://user-images.githubusercontent.com/78807472/135682706-1d6bb726-967b-4284-af72-caa876460891.png)
+<img src="https://user-images.githubusercontent.com/78807472/135682706-1d6bb726-967b-4284-af72-caa876460891.png" height = "300">
 
 
 ### Introduction
@@ -33,7 +33,7 @@ October 3, 2021
 
 The team completed hardware setup of all of the sensors and the LED light.
 
-![Oct3Circuit](https://user-images.githubusercontent.com/49326756/135782207-aafcd84f-e19b-41ab-9677-c0523eb0ba7f.JPG)
+<img src="https://user-images.githubusercontent.com/49326756/135782207-aafcd84f-e19b-41ab-9677-c0523eb0ba7f.JPG" height = "250">
 
 Together, we edited code for the following test cases that will be combined to determine if an emergency vehicle is approaching. We incorporated the ADC into the light sensor to show intensity rather than only light/no light.
 1. Sound Detection only (SoundTest.py)
@@ -55,6 +55,10 @@ Currently working on obtaining the spec sheets for all of our sensors used. Our 
 Octboer 8, 2021
 
 We ran all of our experiments and videod some of the trials. In our code (FinalCodeWithPrintOuts.py), we added a write to text file section so that we would be able to do statistical analysis on the outputs to determine the number of false positives and false negatives we encountered in each trial. 
+
+October 12, 2021
+
+We finished assigning tasks for the Github report writing and created the voiceovers for our video.
 
 
 ### Problems Encountered
@@ -82,10 +86,15 @@ LED light was turning off at the beginning of each sample test
 where should we place the initializing in the code with callback and while loop
 
 October 8, 2021
-light intensity difference = umbrella
-recieving a none for every time the first sample was run
-had to ask Brian for scissors
-error in how to create text file
+During our experiments, we struggled to have the light intensity difference be strong enough while there were other people in the room. We decided to add an umbrella on top of the sensor to increase the difference in intensity before we were able to turn off the lights when other groups left. 
+
+<img src="https://user-images.githubusercontent.com/91758370/136990524-3fe045f4-857f-4764-847d-5ae601a304cd.jpeg" height = "350">
+
+We also ran into a problem of recieving a 'none' value for every time the first sample was run. To fix this, we coded out our first sample as we knew it was always going to be wrong. Finally, it took us a bit to debug our code in writing the text files for the statistical analysis we would create.
+
+Octboer 12, 2021
+
+Over the weekend, one of our wires got chewed by a group member's cat. Since we had already filmed our experiments, we didn't have a huge problem but we did replace the wire. 
 
 ### Future Plan
 October 1, 2021
@@ -113,6 +122,10 @@ October 8, 2021
 
 In our next meeting we plan to edit and voiceover the videos from the meeting today and incorporate additional video / instructional and presentation information.
 
+Octboer 12, 2021
+
+This was our final meeting and all other small details for the class will be communicated over our Whatsapp group chat!
+
 ## Methodology
 
 ### Phenomena of Interest
@@ -132,7 +145,7 @@ Overall, each of these phenomena individually will pick up on many stimuli that 
 
 The sensor and Raspberry Pi configuration can be found in Figure XX
 
-![PinDiagram](https://user-images.githubusercontent.com/49326756/136623919-8b73a6c2-4dd8-4ff6-b9f3-76a94cdeb79b.jpg)
+<img src = "https://user-images.githubusercontent.com/49326756/136623919-8b73a6c2-4dd8-4ff6-b9f3-76a94cdeb79b.jpg" height = "500">
 
 
 ### Signal Conditioning and Processing
