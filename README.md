@@ -145,6 +145,7 @@ The sensor and Raspberry Pi configuration can be found in Figure XX
 ### Signal Conditioning and Processing
 - use of difference of intensity for light
   - Establish an ambient setting for light, test approximately how much intensity reading will change when flashing light is added, use that change as a baseline       for expected difference in light intensity for a flashing light
+  - Also connected to ADC to read intensity value rather than just low or high
 - use of multiple EV sense conditions
 - use of multiple TRUE of EV sensed to decrease the rate of false positives
   - We are only looking for EV that are behind the car, so the distane sensor must detect an approaching or close object in addition to the sensed flashing lights      and high sound 
