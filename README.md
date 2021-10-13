@@ -145,19 +145,30 @@ Overall, each of these phenomena individually will pick up on many stimuli that 
 ### Sensor(s) Used
 <img width="565" alt="Screen Shot 2021-10-12 at 11 54 43 AM" src="https://user-images.githubusercontent.com/91758370/136989464-ca08c1a8-442a-4949-be41-8d27258d1b39.png">
 
+Light
+
+As shown in the table above, the light sensor has both a digital and an analog output. We used the analog output in conjuction with the ADC described below in our project. This sensor works using the photoresistors onboard and sensing the change in ambient lighting based on the threshold. A series of resistance electrical signals is conveyed once this is detected.
+
+Sound
+
+The sound sensor only has an analog output, showing LOW when the sound detected is above the threshold and HIGH when the sound is below the threshold (or not detected). When the sensitivity of the sensor is increased, it takes less sound to trigger a LOW, or sound detected, output.
+
+Distance
+
+The distance sensor only has a digital output, showing the distance to the nearest object in centimeters. To do this, the sensor sends out a high frequency sound pulse and determine the time it takes for the wave to bounce back to the sensor. Since sound travels at the same speed no matter the surrounding environment on Earth, the distance sensor can calculate the space between itself and the nearest object, thus outputting the digital number of the echo time.
+
+ADC
+
+As mentioned, the ADC was used in conjuction with the light sensor in our project. It takes the continuous signal of light from the environment and breaks it down into readable digitized signals as intensities. With a 10-bit resoultion and 8 channels, there are 1024 different levels that can be output as voltages. This leaves the light intensity readings relatively specific in terms of the needs of our project.
+
 The sensor and Raspberry Pi configuration can be found in Figure XX
 
 <img src = "https://user-images.githubusercontent.com/49326756/136623919-8b73a6c2-4dd8-4ff6-b9f3-76a94cdeb79b.jpg" height = "500">
 
 ### Signal Conditioning and Processing
-- use of difference of intensity for light
-  - Establish an ambient setting for light, test approximately how much intensity reading will change when flashing light is added, use that change as a baseline       for expected difference in light intensity for a flashing light
-  - The output of the light sensor is analog, which cannot be read by the Raspberry Pi.  To fix this, we used an ADC so that the actual intensity of light can be determined from the output rather than just high or low.  (Shweta, can you add what we talked about earlier here?)
-- use of multiple EV sense conditions
-- use of multiple TRUE conditions of EV sensed to decrease the rate of false positives
-  - We are only looking for EV that are behind the car, so the distane sensor must detect an approaching or close object in addition to the sensed flashing lights      and high sound 
+The signal conditioning and processing in our project was mostly based on the light sensor. We had to use the ADC as described above to convert the analog output to the digital intensity needed. Using the difference in these sampled intensities, we were able to determine if a light was actually flashing or if it was just the detection of one longer bright light.
 
-Our group experienced aliasing in the light sensing we completed. Our tests were completed at either (1) a flashing frequency of 150 bpm (2.5 Hz) and a sleep time of 1 second or (2) a flashing frequency of 200 bpm (3.33 Hz) and a sleep time of 0.75 seconds. For this explanation, we will use the second frequency (3.33 Hz) as an example.
+Our project experienced aliasing in the light sensing we completed. Our tests were completed at either (1) a flashing frequency of 150 bpm (2.5 Hz) and a sleep time of 1 second or (2) a flashing frequency of 200 bpm (3.33 Hz) and a sleep time of 0.75 seconds. For this explanation, we will use the second frequency (3.33 Hz) as an example.
 
 The sampling frequency for the flashing of 3.33 Hz is based on the sleep time of 0.75 seconds which equals a sampling frequency of 1.33 Hz. Given the Nyquist theorem, the maximum frequency we should be able to read is 0.67 Hz (f<sub>n</sub>). From here, we know that k = fs / f<sub>n</sub> = 3.33 Hz / 0.67 Hz = 5.0  
 
