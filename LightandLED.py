@@ -1,3 +1,5 @@
+#Source code: https://www.freva.com/light-sensor-on-raspberry-pi/
+
 import RPi.GPIO as GPIO
 import time
 
