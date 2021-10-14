@@ -1,3 +1,5 @@
+#Source code: https://kookye.com/2017/06/01/design-sound-light-switch-throught-raspberry-pi-and-sound-light-sensor/
+
 import RPi.GPIO as GPIO
 import time
 import os
