@@ -164,7 +164,7 @@ The distance sensor only has a digital output, showing the distance to the neare
 
 As mentioned, the ADC was used in conjuction with the light sensor in our project. It takes the continuous signal of light from the environment and breaks it down into readable digitized signals as intensities. With a 10-bit resoultion and 8 channels, there are 1024 different levels that can be output as voltages. This leaves the light intensity readings relatively specific in terms of the needs of our project. (Sklar)
 
-The sensor and Raspberry Pi configuration can be found in Figure XX
+The sensor and Raspberry Pi configuration can be found below, and the written out pin configuration can be found in PinConfiguration.
 
 <img src = "https://user-images.githubusercontent.com/49326756/136623919-8b73a6c2-4dd8-4ff6-b9f3-76a94cdeb79b.jpg" height = "500">
 
@@ -250,7 +250,7 @@ To test the effectiveness of our emergency vehicle detection system, we complete
 The video linked at the top of this page shows how the system responds appropriately to each scenario, with the detection of an approaching emergency vehicle and the LED turning on only for Scenario 7.
 
 Statistical Analysis:
-To determine how accurate our system is at detecting emergency vehicles, we performed a series tests to determine how often there is a false positive or negative.  A false positive is defined as the system outputting an emergency vehicle (LED on and music volume reduced) when there is no emergency vehicle.  A false negative is the system not detecting an emergency vehicle even when there is one.  We tested the system by playing a siren and having a vehicle within the trigger distance, but turning the flashing light on and off.  The experimental results can be found in Table XX.  The false negatives are difficult to verify as real false negatives because it could have resulted in a miscommunication between the recorder and the person controlling the flashing lights.
+To determine how accurate our system is at detecting emergency vehicles, we performed a series tests to determine how often there is a false positive or negative.  A false positive is defined as the system outputting an emergency vehicle (LED on and music volume reduced) when there is no emergency vehicle.  A false negative is the system not detecting an emergency vehicle even when there is one.  We tested the system by playing a siren and having a vehicle within the trigger distance, but turning the flashing light on and off.  The experimental results can be found below.  The false negatives are difficult to verify as real false negatives because it could have resulted in a miscommunication between the recorder and the person controlling the flashing lights.
 
 <img width="373" alt="Screen Shot 2021-10-12 at 12 40 12 PM" src="https://user-images.githubusercontent.com/49326756/136996177-b3c4eb48-eb41-4edd-9fcf-af2538e314e9.png">
 
