@@ -7,7 +7,7 @@
 ### Introduction
 
 ### Motivation
-Emergency vehicle response times are critical to saving lives of those in need both in arrival to the scene and transportation to the hospital or emergency care after an accident. By reducing emergency vehicle response time by just 1 minute, patient survival rate increases by over 2%. Everyday vehicles on the road are often a hindrance to the emergency vehicles reaching their destinations. To make this less of an issue, our team created an autoamted response system when emergency vehicles are detected. 
+Emergency vehicle response times are critical to saving lives of those in need both in arrival to the scene and transportation to the hospital or emergency care after an accident. By reducing emergency vehicle response time by just 1 minute, patient survival rate increases by over 2% (Bürger). Everyday vehicles on the road are often a hindrance to the emergency vehicles reaching their destinations. To make this less of an issue, our team created an autoamted response system when emergency vehicles are detected. 
 
 When the flashing lights and loud siren sounds of an emergency vehicle is sensed approaching the vehicle from behind, the radio volume is automatically reduced and a dashboard message is displayed 'Emergency Vehicle Approaching'. With the reduction in noise and visual cue, drivers will be able to react more quickly to make room on the road for emergency vehicles en route to an active scene or hospital.
 
@@ -148,11 +148,11 @@ Overall, each of these phenomena individually will pick up on many stimuli that 
 
 #### Light
 
-As shown in the table above, the light sensor has both a digital and an analog output. We used the analog output in conjuction with the ADC described below in our project. This sensor works using the photoresistors onboard and sensing the change in ambient lighting based on the threshold. A series of resistance electrical signals is conveyed once this is detected.  The photoresistors contain semicondutors, which when struck by light, allow electrons in the material to enter the conductance band.  This causes a drop in the resistance, with higher intensities of light meaning a greater drop in resistance.  Low light conditions with mean the sensor will output a high resistance.  This resistance can then be converted into intensity using a known conversion formula.  
+As shown in the table above, the light sensor has both a digital and an analog output. We used the analog output in conjuction with the ADC described below in our project. This sensor works using the photoresistors onboard and sensing the change in ambient lighting based on the threshold. A series of resistance electrical signals is conveyed once this is detected.  The photoresistors contain semicondutors, which when struck by light, allow electrons in the material to enter the conductance band.  This causes a drop in the resistance, with higher intensities of light meaning a greater drop in resistance.  Low light conditions with mean the sensor will output a high resistance.  This resistance can then be converted into intensity using a known conversion formula. (Keim)  
 
 #### Sound
 
-The sound sensor only has an analog output, showing LOW when the sound detected is above the threshold and HIGH when the sound is below the threshold (or not detected). When the sensitivity of the sensor is increased, it takes less sound to trigger a LOW, or sound detected, output.
+The sound sensor only has an analog output, showing LOW when the sound detected is above the threshold and HIGH when the sound is below the threshold (or not detected). When the sensitivity of the sensor is increased, it takes less sound to trigger a LOW, or sound detected, output. (Banggod)
 
 #### Distance
 
@@ -160,7 +160,7 @@ The distance sensor only has a digital output, showing the distance to the neare
 
 #### Analog to Digital Converter
 
-As mentioned, the ADC was used in conjuction with the light sensor in our project. It takes the continuous signal of light from the environment and breaks it down into readable digitized signals as intensities. With a 10-bit resoultion and 8 channels, there are 1024 different levels that can be output as voltages. This leaves the light intensity readings relatively specific in terms of the needs of our project.
+As mentioned, the ADC was used in conjuction with the light sensor in our project. It takes the continuous signal of light from the environment and breaks it down into readable digitized signals as intensities. With a 10-bit resoultion and 8 channels, there are 1024 different levels that can be output as voltages. This leaves the light intensity readings relatively specific in terms of the needs of our project. (Sklar)
 
 The sensor and Raspberry Pi configuration can be found in Figure XX
 
@@ -178,7 +178,7 @@ Using the folding diagram shown below from Class Reference 15, we know that the 
 <img width="401" alt="Screen Shot 2021-10-12 at 12 32 48 PM" src="https://user-images.githubusercontent.com/91758370/136995267-a63c93dd-a388-4715-bf0e-7105fa54f34f.png">
 
 #### Code
-Our fully commented and working code can be found in the file FinalCodeWithComments.py.  The most important part of code is within the callback function, which is called when the sound sensor detects a sound intensity that is greater than our set threshold.  We set the sound sensor threshold using a video playing regular traffic sounds (https://www.youtube.com/watch?v=fh3EdeGNKus).  Once the callback function is called, we test to see if the light conditions are a flashing light.  This is done by comparing consecutive light intensity readings.  If the difference in the consecutive readings is high, then the light went from high intensity to low intensity, which could mean a flashing light.  We calculated two differences in consecutive readings to verify that a light is flashing multiple times rather than just once.  The callback function also calls the function distance, which calculates the distance between the car and any object behind it.  If the object behind the car is within a certain distance, we determined that it meant the object was approaching.
+Our fully commented and working code can be found in the file FinalCodeWithComments.py.  The source code we used is cited in the final section of the report. The most important part of code is within the callback function, which is called when the sound sensor detects a sound intensity that is greater than our set threshold.  We set the sound sensor threshold using a video playing regular traffic sounds (https://www.youtube.com/watch?v=fh3EdeGNKus).  Once the callback function is called, we test to see if the light conditions are a flashing light.  This is done by comparing consecutive light intensity readings.  If the difference in the consecutive readings is high, then the light went from high intensity to low intensity, which could mean a flashing light.  We calculated two differences in consecutive readings to verify that a light is flashing multiple times rather than just once.  The callback function also calls the function distance, which calculates the distance between the car and any object behind it.  If the object behind the car is within a certain distance, we determined that it meant the object was approaching.
 
 ```ruby
 def callback(channel):
