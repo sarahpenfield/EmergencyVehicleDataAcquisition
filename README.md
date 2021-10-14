@@ -158,6 +158,8 @@ The sound sensor only has an analog output, showing LOW when the sound detected 
 
 The distance sensor only has a digital output, showing the distance to the nearest object in centimeters. To do this, the sensor sends out a high frequency sound pulse and determine the time it takes for the wave to bounce back to the sensor. Since sound travels at approximately the same speed no matter the surrounding environment on Earth (temperature dependent, but we are not testing extreme conditions), the distance sensor can calculate the space between itself and the nearest object, thus outputting the digital number of the echo time.
 
+![ultrasonic_sensor_radiations](https://user-images.githubusercontent.com/49326756/137359036-b37e4613-237c-45c2-8504-d426d8a1b41e.jpeg)
+
 #### Analog to Digital Converter
 
 As mentioned, the ADC was used in conjuction with the light sensor in our project. It takes the continuous signal of light from the environment and breaks it down into readable digitized signals as intensities. With a 10-bit resoultion and 8 channels, there are 1024 different levels that can be output as voltages. This leaves the light intensity readings relatively specific in terms of the needs of our project. (Sklar)
