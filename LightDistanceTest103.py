@@ -1,3 +1,6 @@
+#Source Code: https://kookye.com/2017/06/01/design-sound-light-switch-throught-raspberry-pi-and-sound-light-sensor/
+#Source Code: https://tutorials-raspberrypi.com/raspberry-pi-ultrasonic-sensor-hc-sr04/
+
 import RPi.GPIO as GPIO
 import time
 import os
