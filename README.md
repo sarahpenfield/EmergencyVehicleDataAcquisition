@@ -257,4 +257,22 @@ Future work would include adding the color filter that we were unable to get to 
 
 ## Sources
 
+Arduino Forum. (2018). “How to convert sound sensor output reading to decibel value?” Arduino Forum, <https://forum.arduino.cc/t/how-to-convert-sound-sensor-output-reading-to-decibel-value/513239> (Oct. 14, 2021).
 
+Banggood.com. (2021). “3Pcs Microphone Sound Sensor Module Voice Sensor High Sensitivity Sound Detection Module.” www.banggood.com, <https://usa.banggood.com/3Pcs-Microphone-Sound-Sensor-Module-Voice-Sensor-High-Sensitivity-Sound-Detection-Module-p-1254928.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=US&utm_content=minha&utm_campaign=minha-usg-pc¤cy=USD&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgcs&utm_content=sandra&utm_campaign=sandra-ssc-usg-all-newcustom-ncv90-0420-19cov&ad_id=432153545270&gclid=CjwKCAjwqeWKBhBFEiwABo_XBqywUlY0gQ2NyC9dYwZM_aSot1bLFAsDhlg-or-2dWL1Ni5KukmZ_BoC1YsQAvD_BwE> (Oct. 14, 2021).
+
+Bürger, A., Wnent, J., Bohn, A., Jantzen, T., Brenner, S., Lefering, R., Seewald, S., Gräsner, J.-T., and Fischer, M. (2018). “The Effect of Ambulance Response Time on Survival Following Out-of-Hospital Cardiac Arrest.” Deutsches Aerzteblatt Online.
+
+‌“Design sound light switch throught raspberry pi and sound light sensor – kookye.com.” (2017). Kookye.com, <https://kookye.com/2017/06/01/design-sound-light-switch-throught-raspberry-pi-and-sound-light-sensor/> (Oct. 14, 2021).
+
+‌Felix. (2015). “Using a Raspberry Pi distance sensor (ultrasonic sensor HC-SR04).” Raspberry Pi Tutorials, Raspberry Pi Tutorials, <https://tutorials-raspberrypi.com/raspberry-pi-ultrasonic-sensor-hc-sr04/> (Oct. 14, 2021).
+
+‌“Home.” (2021). Idahotc.com, <https://idahotc.com/> (Oct. 14, 2021).
+
+Instructables. (2017). “Sound Sensor (Raspberry Pi).” Instructables, Instructables, <https://www.instructables.com/Sound-Sensor-Raspberry-Pi/> (Oct. 14, 2021).
+
+‌Keim, R. (2021). “Photoresistor.” Eepower.com, eepower.com, <https://eepower.com/resistor-guide/resistor-types/photo-resistor/#> (Oct. 14, 2021).
+
+‌Sklar, M. (2012). “Analog Inputs for Raspberry Pi Using the MCP3008.” Adafruit Learning System, <https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi/connecting-the-cobbler-to-a-mcp3008> (Oct. 14, 2021).
+
+“Using the Pi to measure Decibels - Raspberry Pi Forums.” (2012). Raspberrypi.com, <https://forums.raspberrypi.com/viewtopic.php?t=18014> (Oct. 14, 2021).
