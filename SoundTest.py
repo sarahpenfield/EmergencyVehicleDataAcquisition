@@ -1,3 +1,5 @@
+#Source code: https://www.instructables.com/Sound-Sensor-Raspberry-Pi/
+
 import RPi.GPIO as GPIO
 import time
 
