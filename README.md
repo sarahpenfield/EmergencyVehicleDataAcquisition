@@ -132,7 +132,7 @@ This was our final meeting and all other small details for the class will be com
 
 ### Phenomena of Interest
 1. Light <br />
-We are interested in knowing the intensity of the light in the surrounding environment as there will almost always be ambient light. When intensity is significantly higher than the surrounding light (5% greater) for multiple sensed periods of time, this is an indicator that an emergency vehicle could be approaching.
+We are interested in knowing the intensity of the light in the surrounding environment as there will almost always be ambient light. When intensity is significantly higher than the surrounding light (5% greater) for multiple sensed periods of time, this is an indicator that an emergency vehicle could be approaching.  Because we are only looking for if a light is flashing or not, we only care about the relative intensity of visible light rather than the frequency of the light's wavelength.
 
 2. Sound  <br />
 We are interested in knowing the intensity of the sound in the surrounding envrionment as again there will almost always be background noise around the vehicle. However, our sensor cannot determine the intensity of sound and rather can only sense whether a sound above the threshold is present. When sound above the threshold is sesnsed multiple times in a row, it indicates that an emergency vehicle could be approaching.
@@ -145,19 +145,19 @@ Overall, each of these phenomena individually will pick up on many stimuli that 
 ### Sensor(s) Used
 <img width="565" alt="Screen Shot 2021-10-12 at 11 54 43 AM" src="https://user-images.githubusercontent.com/91758370/136989464-ca08c1a8-442a-4949-be41-8d27258d1b39.png">
 
-Light
+#### Light
 
-As shown in the table above, the light sensor has both a digital and an analog output. We used the analog output in conjuction with the ADC described below in our project. This sensor works using the photoresistors onboard and sensing the change in ambient lighting based on the threshold. A series of resistance electrical signals is conveyed once this is detected.
+As shown in the table above, the light sensor has both a digital and an analog output. We used the analog output in conjuction with the ADC described below in our project. This sensor works using the photoresistors onboard and sensing the change in ambient lighting based on the threshold. A series of resistance electrical signals is conveyed once this is detected.  The photoresistors contain semicondutors, which when struck by light, allow electrons in the material to enter the conductance band.  This causes a drop in the resistance, with higher intensities of light meaning a greater drop in resistance.  Low light conditions with mean the sensor will output a high resistance.  This resistance can then be converted into intensity using a known conversion formula.  
 
-Sound
+#### Sound
 
 The sound sensor only has an analog output, showing LOW when the sound detected is above the threshold and HIGH when the sound is below the threshold (or not detected). When the sensitivity of the sensor is increased, it takes less sound to trigger a LOW, or sound detected, output.
 
-Distance
+#### Distance
 
-The distance sensor only has a digital output, showing the distance to the nearest object in centimeters. To do this, the sensor sends out a high frequency sound pulse and determine the time it takes for the wave to bounce back to the sensor. Since sound travels at the same speed no matter the surrounding environment on Earth, the distance sensor can calculate the space between itself and the nearest object, thus outputting the digital number of the echo time.
+The distance sensor only has a digital output, showing the distance to the nearest object in centimeters. To do this, the sensor sends out a high frequency sound pulse and determine the time it takes for the wave to bounce back to the sensor. Since sound travels at approximately the same speed no matter the surrounding environment on Earth (temperature dependent, but we are not testing extreme conditions), the distance sensor can calculate the space between itself and the nearest object, thus outputting the digital number of the echo time.
 
-ADC
+#### Analog to Digital Converter
 
 As mentioned, the ADC was used in conjuction with the light sensor in our project. It takes the continuous signal of light from the environment and breaks it down into readable digitized signals as intensities. With a 10-bit resoultion and 8 channels, there are 1024 different levels that can be output as voltages. This leaves the light intensity readings relatively specific in terms of the needs of our project.
 
@@ -177,7 +177,62 @@ Using the folding diagram shown below from Class Reference 15, we know that the 
 <img width="401" alt="Screen Shot 2021-10-12 at 12 32 48 PM" src="https://user-images.githubusercontent.com/91758370/136995267-a63c93dd-a388-4715-bf0e-7105fa54f34f.png">
 
 #### Code
-(Anamika, can you add something about your commented code here? Like the most important aspects or where to find the complete commented code)
+Our fully commented and working code can be found in the file FinalCodeWithComments.py.  The most important part of code is within the callback function, which is called when the sound sensor detects a sound intensity that is greater than our set threshold.  We set the sound sensor threshold using a video playing regular traffic sounds (https://www.youtube.com/watch?v=fh3EdeGNKus).  Once the callback function is called, we test to see if the light conditions are a flashing light.  This is done by comparing consecutive light intensity readings.  If the difference in the consecutive readings is high, then the light went from high intensity to low intensity, which could mean a flashing light.  We calculated two differences in consecutive readings to verify that a light is flashing multiple times rather than just once.  The callback function also calls the function distance, which calculates the distance between the car and any object behind it.  If the object behind the car is within a certain distance, we determined that it meant the object was approaching.
+
+```ruby
+def callback(channel):
+         musicVolume = 10
+         i1 = 0
+         i2 = 0
+         i3 = 0
+         del1 = 0
+         del2 = 0
+         if GPIO.input(channel): 
+             init()
+             counter = 0
+             print 'sound'
+             while counter < 5:
+                 counter += 1
+                 photo_value = readadc(photo_ch, SPICLK, SPIMOSI, SPIMISO, SPICS)
+                 i1 = i2
+                 i2 = i3
+                 #equation converts output photo_value to intensity, check what the output is
+                 i3 = (1024-photo_value)/1024.*100
+                 
+                 #see the difference between two flashes, depends on the sampling frequency
+                 del1 = del2
+                 del2 = abs(i3-i2)
+
+                 #get current distance
+                 dist = distance()
+
+
+                 if (dist <= tooClose) and (del1>lightDiffThreshold) and \
+                 (del2>lightDiffThreshold):
+                     #turn on LED
+                     GPIO.output(red_led, GPIO.HIGH)
+                     #Turn down music
+                     musicVolume = 1
+                     print('EV!     Distance= ' + str(dist) + '  Light= ' + str(del1) + ', ' + str(del2))
+                     time.sleep(sampleFreq)
+                 elif (counter == 1):
+                     print('Sound Detected')
+                     time.sleep(sampleFreq)
+                 elif (counter > 1):
+                     print('None,   Distance= ' + str(dist) + '  Light= ' + str(del1) + ', ' + str(del2))
+                     #turn off LED
+                     GPIO.output(red_led, GPIO.LOW)
+                     time.sleep(sampleFreq)
+         
+                 
+GPIO.add_event_detect(channel, GPIO.BOTH)  # let us know when the pin goes HIGH or LOW
+GPIO.add_event_callback(channel, callback)  # assign function to GPIO PIN, Run function on change
+
+while True:
+        time.sleep(1)
+```
+
+Overall, our code works on a simple hierarchy: first it must detect the siren.  The system then checks for flashing lights and an approaching object.  If all three of these conditions are met, then it outputs that an emergency vehicle is approaching and turns on the LED and reduces the music volume.
 
 ## Experiments and Results
 To test the effectiveness of our emergency vehicle detection system, we completed the seven test trials.  Each trial represents a potential real life scenario that could either mean an emergency vehicle or trigger a false negative.
@@ -197,7 +252,7 @@ To determine how accurate our system is at detecting emergency vehicles, we perf
 <img width="373" alt="Screen Shot 2021-10-12 at 12 40 12 PM" src="https://user-images.githubusercontent.com/49326756/136996177-b3c4eb48-eb41-4edd-9fcf-af2538e314e9.png">
 
 ## Discussion
-Future work would include adding the color filter that we were unable to get to due to resources and time constraints.  This would help reduce false positives due to construction/oversized vehicles approaching, which have flashing lights and loud noises.  The flashing lights on these vehicle types are orange, so filtering for only red and blue would reduce false positives.  Also include sampling for more light flashing frequencies due to emergency vehicles having more than one flashing light at different frequencies and colors.
+Future work would include adding the color filter that we were unable to get to due to resources and time constraints.  This would help reduce false positives due to construction/oversized vehicles approaching, which have flashing lights and loud noises.  The flashing lights on these vehicle types are orange, so filtering for only red and blue would reduce false positives.  We would also include sampling for more light flashing frequencies due to emergency vehicles having more than one flashing light at different frequencies and colors.
 
 ## Sources
 
