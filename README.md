@@ -156,7 +156,7 @@ The sound sensor only has an analog output, showing LOW when the sound detected 
 
 #### Distance
 
-The distance sensor only has a digital output, showing the distance to the nearest object in centimeters. To do this, the sensor sends out a high frequency sound pulse and determine the time it takes for the wave to bounce back to the sensor, as shown in the image below (https://www.tutorialspoint.com/arduino/arduino_ultrasonic_sensor.htm). Since sound travels at approximately the same speed no matter the surrounding environment on Earth (temperature dependent, but we are not testing extreme conditions), the distance sensor can calculate the space between itself and the nearest object, thus outputting the digital number of the echo time.
+The distance sensor only has a digital output, showing the distance to the nearest object in centimeters. To do this, the sensor sends out a high frequency sound pulse and determine the time it takes for the wave to bounce back to the sensor, as shown in the image below (Arduino). Since sound travels at approximately the same speed no matter the surrounding environment on Earth (temperature dependent, but we are not testing extreme conditions), the distance sensor can calculate the space between itself and the nearest object, thus outputting the digital number of the echo time.
 
 ![ultrasonic_sensor_radiations](https://user-images.githubusercontent.com/49326756/137359036-b37e4613-237c-45c2-8504-d426d8a1b41e.jpeg)
 
@@ -262,6 +262,8 @@ We also expect there will be difficulties implementing our system into full scal
 ## Sources
 
 Arduino Forum. (2018). “How to convert sound sensor output reading to decibel value?” Arduino Forum, <https://forum.arduino.cc/t/how-to-convert-sound-sensor-output-reading-to-decibel-value/513239> (Oct. 14, 2021).
+
+Arduino. (2021). "Ultrasonic Sensor" Tutorials Point,  <https://www.tutorialspoint.com/arduino/arduino_ultrasonic_sensor.htm> (Oct 14, 2021).
 
 Banggood.com. (2021). “3Pcs Microphone Sound Sensor Module Voice Sensor High Sensitivity Sound Detection Module.” www.banggood.com, <https://usa.banggood.com/3Pcs-Microphone-Sound-Sensor-Module-Voice-Sensor-High-Sensitivity-Sound-Detection-Module-p-1254928.html?utm_source=googleshopping&utm_medium=cpc_organic&gmcCountry=US&utm_content=minha&utm_campaign=minha-usg-pc¤cy=USD&cur_warehouse=CN&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgcs&utm_content=sandra&utm_campaign=sandra-ssc-usg-all-newcustom-ncv90-0420-19cov&ad_id=432153545270&gclid=CjwKCAjwqeWKBhBFEiwABo_XBqywUlY0gQ2NyC9dYwZM_aSot1bLFAsDhlg-or-2dWL1Ni5KukmZ_BoC1YsQAvD_BwE> (Oct. 14, 2021).
 
