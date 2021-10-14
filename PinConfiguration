@@ -14,8 +14,6 @@ Sound Sensor
   GND ---> GND 20
   OUT ---> GPIO 17
 
-  OUT ---> ADC 1
-
 ADC MCP3008
   VDD ---> +3.3V
   VREF ---> +3.3V
