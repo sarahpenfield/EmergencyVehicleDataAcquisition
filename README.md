@@ -156,7 +156,7 @@ The sound sensor only has an analog output, showing LOW when the sound detected 
 
 #### Distance
 
-The distance sensor only has a digital output, showing the distance to the nearest object in centimeters. To do this, the sensor sends out a high frequency sound pulse and determine the time it takes for the wave to bounce back to the sensor. Since sound travels at approximately the same speed no matter the surrounding environment on Earth (temperature dependent, but we are not testing extreme conditions), the distance sensor can calculate the space between itself and the nearest object, thus outputting the digital number of the echo time.
+The distance sensor only has a digital output, showing the distance to the nearest object in centimeters. To do this, the sensor sends out a high frequency sound pulse and determine the time it takes for the wave to bounce back to the sensor, as shown in the image below (https://www.tutorialspoint.com/arduino/arduino_ultrasonic_sensor.htm). Since sound travels at approximately the same speed no matter the surrounding environment on Earth (temperature dependent, but we are not testing extreme conditions), the distance sensor can calculate the space between itself and the nearest object, thus outputting the digital number of the echo time.
 
 ![ultrasonic_sensor_radiations](https://user-images.githubusercontent.com/49326756/137359036-b37e4613-237c-45c2-8504-d426d8a1b41e.jpeg)
 
@@ -256,6 +256,8 @@ To determine how accurate our system is at detecting emergency vehicles, we perf
 
 ## Discussion
 Future work would include adding the color filter that we were unable to get to due to resources and time constraints.  This would help reduce false positives due to construction/oversized vehicles approaching, which have flashing lights and loud noises.  The flashing lights on these vehicle types are orange, so filtering for only red and blue would reduce false positives.  We would also include sampling for more light flashing frequencies due to emergency vehicles having more than one flashing light at different frequencies and colors.
+
+We also expect there will be difficulties implementing our system into full scales vehicles, but we were able to find that it worked on the model scale.
 
 ## Sources
 
